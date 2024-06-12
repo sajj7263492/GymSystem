@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block title %}
+Profile
+{% endblock title %}
+{% block head %}
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-3"> </div>
+
+        <div class="col-md-6">
+
+
+            {% comment %} {% for message in messages %}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                <strong></strong> {{message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %} {% endcomment %}
+
+            {% comment %} Contact Us COde {% endcomment %}
+
+            {% comment %} <center>
+                <h5 class='display-4'>Your Details</h5>
+            </center> {% endcomment %}
+
+
+            <h1>Enrollment Details</h1>
+
+            {% for post in posts %}
+
+            <ul class="list-group">
+                <li class="list-group-item bg-dark text-white">
+                    <h5>Name : {{post.FullName}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>Email: {{post.Email}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>Gender : {{post.Gender}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>PhoneNumber : {{post.PhoneNumber}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>DOB: {{post.DOB}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>Trainer : {{post.SelectTrainer}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>Reference: {{post.Reference}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>Address: {{post.Address}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>PaymentStatus: {{post.paymentStatus}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>Upcoming Due Date: {{post.DueDate}}</h5>
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                    <h5>Joining Date: {{post.timeStamp}}</h5>
+                </li>
+
+            </ul>
+            {% endfor %}
+
+        </div>
+
+        <!-- <div class="col-md-8 justify-content-end">
+        <div>
+            <center> 
+                <h2 class="disply-4 mt-3">
+                    <b>Attendance Date</b>
+                </h2>
+            </center>
+        </div>
+
+        <table class="table">
+            <thread class="thread-warning">
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Login Time</th>
+                    <th scope="col">Logout Time</th>
+                    <th scope="col">Workout</th>
+                    <th scope="col">Trained By</th>
+                </tr>
+            </thread>
+
+            <tbody>
+
+
+                
+                {% for attend in attendance %}
+                <tr>
+
+                    <td>{{attend.selectDate}}</td>
+                    <td>{{attend.login}}</td>
+                    <td>{{attend.logout}}</td>
+                    <td>{{attend.selectWorkout}}</td>
+                    <td>{{attend.trainedBy}}</td>
+
+                    
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+        </div> -->
+
+    </div>
+
+
+
+</div>
+
+
+
+
+{% endblock head %}
